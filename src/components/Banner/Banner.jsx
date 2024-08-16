@@ -22,9 +22,14 @@ const Banner = () => {
             {/*Banner Text*/}
             <div className="flex flex-col justify-center">
                 <div className="text-center md:text-left space-y-12">
-                    <h1 className="text-3xl md:text-4xl font-bold !leading-snug">
+                    <motion.h1
+                        initial={{opacity: 0, scale: 0.5}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.5}} 
+                        className="text-3xl md:text-4xl font-bold !leading-snug">
                         The World's Leading Online Learning Platform
-                    </h1>
+                    </motion.h1>
                     <div className="flex flex-col gap-6">
                         <motion.div
                             variants={FadeUp(0.2)}
