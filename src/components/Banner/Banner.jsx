@@ -13,7 +13,11 @@ const Banner = () => {
         <div className="container py-14 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
             {/*Banner Image*/}
             <div className="flex justify-center items-center">
-                <img 
+                <motion.img
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
                     src={BannerPng} 
                     alt=""  
                     className="w-[350px] md:max-w-[450px] object-cover drop-shadow"
